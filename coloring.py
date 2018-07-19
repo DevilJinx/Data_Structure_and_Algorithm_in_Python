@@ -30,4 +30,23 @@
 # 用这段代替前面程序框架中主循环体里的一部分
 
 # Python的集合数据类型不支持元素遍历，但上述算法中需要遍历集合元素，还要在遍历中修改集合。处理这个问题的方法是在每次需要遍历时
-# 从当时
+# 从当时的verts生成一个表，而后对表做遍历(并不直接对集合遍历)
+# 算法中需要的图操作依赖于图的表示，需要考虑如何在Python中实现图数据结构。图是一种复杂数据结构，应该支持一些操作。这里假定两个与
+# 图结构有关的操作(依赖于图的表示)：
+# 1、函数vertices(G)得到G中所有顶点的集合
+# 2、谓词not_adjacent_with_set(v, group, G)检查顶点v与顶点集group中各项点在图G中是否有边连接
+# 程序(算法)：
+
+def coloring(G):
+    color = 0
+    groups = set()
+    verts = vertices(G)
+    while verts:
+        new_group = set()
+        for v in list(verts):
+            if not_adjacent_with_set(v, newgroup, G):
+                new_group_add(v)
+                verts.remove(v)
+        group.add((color, new_group))
+        color += 1
+    return groups
