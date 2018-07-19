@@ -1,3 +1,6 @@
 {
-    "python.pythonPath": "/anaconda2/envs/Python36/bin/python"
+    "python.pythonPath": "/anaconda2/envs/Python36/bin/python",
+    "workbench.colorTheme": "Solarized Dark",
+    "explorer.confirmDelete": false,
+    "editor.fontFamily": "Fixedsys Excelsior 3.01, Fixedsys Excelsior 3.01, 'Fixedsys Excelsior 3.01', monospace",
 }
